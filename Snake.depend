@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1587104712 source:/home/abolfazl/Desktop/CppProjects/Snake/main.cpp
+	<iostream>
+	"Map.h"
+	"EasyMap.h"
+	"Snake.h"
+	"Game.h"
+
+1586887261 /home/abolfazl/Desktop/CppProjects/Snake/include/Map.h
+	<iostream>
+	"Snake.h"
+
+1586804860 /home/abolfazl/Desktop/CppProjects/Snake/include/EasyMap.h
+	"Map.h"
+
+1586886680 source:/home/abolfazl/Desktop/CppProjects/Snake/src/EasyMap.cpp
+	"EasyMap.h"
+
+1586887273 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Map.cpp
+	"Map.h"
+
+1586972424 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Game.cpp
+	"Game.h"
+
+1586972792 /home/abolfazl/Desktop/CppProjects/Snake/include/Game.h
+	"Map.h"
+	"Snake.h"
+	"EasyMap.h"
+	<unistd.h>
+	<thread>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	<ctime>
+
+1586973782 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Snake.cpp
+	"Snake.h"
+
+1586974578 /home/abolfazl/Desktop/CppProjects/Snake/include/Snake.h
+	<vector>
+
