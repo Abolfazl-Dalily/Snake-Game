@@ -83,7 +83,7 @@ void Snake::update(int new_x, int new_y)
     {
         body[i].x = body[i - 1].x;
         body[i].y = body[i - 1].y;
-        body[i].direction = body[i-1].direction ;
+
     }
     body[1].x = new_x ;
     body[1].y = new_y ;

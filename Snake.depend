@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1587104712 source:/home/abolfazl/Desktop/CppProjects/Snake/main.cpp
+1587105178 source:/home/abolfazl/Desktop/CppProjects/Snake/main.cpp
 	<iostream>
 	"Map.h"
 	"EasyMap.h"
@@ -33,7 +33,7 @@
 	<cstdlib>
 	<ctime>
 
-1586973782 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Snake.cpp
+1587107562 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Snake.cpp
 	"Snake.h"
 
 1586974578 /home/abolfazl/Desktop/CppProjects/Snake/include/Snake.h
