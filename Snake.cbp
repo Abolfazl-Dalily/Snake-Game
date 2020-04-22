@@ -40,12 +40,16 @@
 		</Compiler>
 		<Unit filename="include/EasyMap.h" />
 		<Unit filename="include/Game.h" />
+		<Unit filename="include/HardMap.h" />
 		<Unit filename="include/Map.h" />
+		<Unit filename="include/MediumMap.h" />
 		<Unit filename="include/Snake.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/EasyMap.cpp" />
 		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/HardMap.cpp" />
 		<Unit filename="src/Map.cpp" />
+		<Unit filename="src/MediumMap.cpp" />
 		<Unit filename="src/Snake.cpp" />
 		<Extensions>
 			<code_completion />

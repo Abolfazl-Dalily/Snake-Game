@@ -2,12 +2,6 @@
 
 HardMap::HardMap()
 {
-    x_length = 25 ;
-    y_length = 15 ;
-    wall = '#';
-    empty_space = '*';
-    food = '@' ;
-    initialize();
 }
 void HardMap::generate()
 {

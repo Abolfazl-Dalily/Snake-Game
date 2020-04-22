@@ -1,5 +1,15 @@
 #include "Map.h"
 
+Map::Map()
+{
+    x_length = 25 ;
+    y_length = 15 ;
+    wall = '#';
+    empty_space = ' ';
+    food = '@' ;
+    initialize();
+
+}
 void Map::initialize()
 {
     map = new char*[y_length];
@@ -12,7 +22,7 @@ void Map::initialize()
 
 void Map::print(int current_score)
 {
-    std::cout<<"start printing\n";
+
     for(int y=0; y<y_length; y++)
     {
         for (int x = 0; x<x_length; x++)
@@ -170,4 +180,8 @@ int Map::countOfEmptySpace()
     }
     // return 2*x_length + 2*(y_length-2)-1 ;
     return e_s ;
+}
+
+Map::~Map()
+{
 }

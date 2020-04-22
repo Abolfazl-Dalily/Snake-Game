@@ -16,6 +16,7 @@ protected:
 
 public:
 
+    Map();
     void newFood();
     void print(int);
     void initialize();
@@ -28,6 +29,7 @@ public:
     Part_Of_Snake_Body generateSnakeCreateLocation();
     virtual void generate() = 0 ;
     int countOfEmptySpace() ;
+    ~Map();
 
 
 private:

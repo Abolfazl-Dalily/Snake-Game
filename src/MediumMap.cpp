@@ -2,12 +2,6 @@
 
 MediumMap::MediumMap()
 {
-    x_length = 25 ;
-    y_length = 15 ;
-    wall = '#';
-    empty_space = '*';
-    food = '@' ;
-    initialize();
 }
 
 void MediumMap::generate()
@@ -36,7 +30,7 @@ void MediumMap::generate()
 
     for (int y = 3 ; y < y_length - 3 ; y ++ )
     {
-        map[y][5] = wall ;
+        map[y][4] = wall ;
         map[y][20] = wall ;
     }
 
