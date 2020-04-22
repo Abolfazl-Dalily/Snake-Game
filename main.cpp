@@ -100,7 +100,10 @@ int main()
         }
         system("clear");
     }
-    cout << "GodBye !"<<endl;
+    cout << "--- YaHeidar ---"<<endl;
+    cout << "About Me : Abolfazl Dalily"<<endl;
+    cout << "Contact Me : abolfazldalily@zohomail.com"<<endl;
+    cout << "--- GodBye ! ---"<<endl;
 
 
     /*
