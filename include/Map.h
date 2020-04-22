@@ -27,7 +27,7 @@ public:
     // نقطه اولیه برای ایحاد مار را مشخص می کند
     Part_Of_Snake_Body generateSnakeCreateLocation();
     virtual void generate() = 0 ;
-    virtual int countOfEmptySpace() = 0 ;
+    int countOfEmptySpace() ;
 
 
 private:

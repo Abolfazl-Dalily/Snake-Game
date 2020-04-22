@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Map.h"
 #include "EasyMap.h"
+#include "MediumMap.h"
+#include "HardMap.h"
 #include "Snake.h"
 #include "Game.h"
 
@@ -30,10 +32,31 @@ int main()
             case 1 :
             {
                 // Start Game With Default Setting !
-                EasyMap easy_map ;
                 Snake snake ;
+                EasyMap easy_map ;
+                MediumMap medium_map ;
+                HardMap hard_map ;
                 game->resetState();
-                game->bindMap(&easy_map);
+                switch(game->getLevel())
+                {
+                    case Easy : {
+                        game->bindMap(&easy_map);
+                        break ;
+                    }
+                    case Medium :{
+                        game->bindMap(&medium_map);
+                        break ;
+                    }
+                    case Hard : {
+                        game->bindMap(&hard_map);
+                        break ;
+                    }
+                    default : {
+                        game->bindMap(&easy_map);
+                    }
+
+                }
+
                 game->bindSnake(&snake);
                 thread read_new_direction(&Game::getNewDirection,game);
                 game->start();
@@ -116,11 +139,26 @@ void setting(Game *game)
                 cout << "1 : Easy"<<endl;
                 cout << "2 : Medium"<<endl;
                 cout << "3 : Hard"<<endl;
-                cout << "Select A Option From Above";
+                cout << "Select A Option From Above : ";
                 cin>>int_level;
-                game->setLevel(Easy);
+                switch (int_level)
+                {
+                    case 1 : {
+                        game->setLevel(Easy);
+                        break ;
+                    }
+                    case 2 : {
+                        game->setLevel(Medium);
+                        break ;
+                    }
+                    default :{
+                        game->setLevel(Hard);
+                        break;
+                    }
+                }
+                //game->setLevel(Easy);
                 system("clear");
-                cout << "Successfully Changed Level";
+                cout << "Successfully Changed Level . ";
                 f = decide();
                 break;
             }
@@ -134,7 +172,7 @@ void setting(Game *game)
                 cin>>int_speed;
                 game->setSpeed((SPEED)(int_speed*100000));
                 system("clear");
-                cout << "Successfully Changed Speed";
+                cout << "Successfully Changed Speed .";
                 f = decide();
                 break;
             }

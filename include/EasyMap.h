@@ -8,7 +8,6 @@ class EasyMap : public Map
 public:
     EasyMap();
     virtual void generate();
-    int countOfEmptySpace();
     ~EasyMap();
 
 protected:

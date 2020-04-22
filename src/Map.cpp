@@ -12,6 +12,7 @@ void Map::initialize()
 
 void Map::print(int current_score)
 {
+    std::cout<<"start printing\n";
     for(int y=0; y<y_length; y++)
     {
         for (int x = 0; x<x_length; x++)
@@ -152,4 +153,21 @@ Part_Of_Snake_Body Map::generateSnakeCreateLocation()
     Part_Of_Snake_Body head{x,y,direction};
     return head ;
 
+}
+
+int Map::countOfEmptySpace()
+{
+    int e_s = 0 ;
+    for (int y = 0 ; y < y_length ; y++)
+    {
+        for (int x=0 ; x<x_length ; x++)
+        {
+            if (map[y][x] == empty_space)
+            {
+                e_s ++ ;
+            }
+        }
+    }
+    // return 2*x_length + 2*(y_length-2)-1 ;
+    return e_s ;
 }

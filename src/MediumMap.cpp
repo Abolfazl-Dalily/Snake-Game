@@ -1,6 +1,6 @@
-#include "EasyMap.h"
+#include "MediumMap.h"
 
-EasyMap::EasyMap()
+MediumMap::MediumMap()
 {
     x_length = 25 ;
     y_length = 15 ;
@@ -8,12 +8,10 @@ EasyMap::EasyMap()
     empty_space = '*';
     food = '@' ;
     initialize();
-
 }
-void EasyMap::generate()
+
+void MediumMap::generate()
 {
-
-
     // Draw Empty Space
     for (int y = 0; y < y_length; y++)
     {
@@ -34,12 +32,20 @@ void EasyMap::generate()
         map[y][x_length - 1] = wall;
     }
 
+    // Draw Internal Wall
+
+    for (int y = 3 ; y < y_length - 3 ; y ++ )
+    {
+        map[y][5] = wall ;
+        map[y][20] = wall ;
+    }
+
     newFood();
 }
 
 
-EasyMap::~EasyMap()
+
+MediumMap::~MediumMap()
 {
-
+    //dtor
 }
-
