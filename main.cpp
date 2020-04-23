@@ -102,7 +102,9 @@ int main()
     }
     cout << "--- YaHeidar ---"<<endl;
     cout << "About Me : Abolfazl Dalily"<<endl;
-    cout << "Contact Me : abolfazldalily@zohomail.com"<<endl;
+    cout << "Contact With Me :\n\
+             Mail : abolfazldalily@zohomail.com\n\
+             GitHub : @Abolfazl-Dalily"<<endl;
     cout << "--- GodBye ! ---"<<endl;
 
 

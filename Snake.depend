@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1587580909 source:/home/abolfazl/Desktop/CppProjects/Snake/main.cpp
+1587647888 source:/home/abolfazl/Desktop/CppProjects/Snake/main.cpp
 	<iostream>
 	"Map.h"
 	"EasyMap.h"
@@ -18,7 +18,7 @@
 1587580254 source:/home/abolfazl/Desktop/CppProjects/Snake/src/EasyMap.cpp
 	"EasyMap.h"
 
-1587580503 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Map.cpp
+1587647688 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Map.cpp
 	"Map.h"
 
 1587581075 source:/home/abolfazl/Desktop/CppProjects/Snake/src/Game.cpp

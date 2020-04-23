@@ -85,84 +85,77 @@ Part_Of_Snake_Body Map::generateSnakeCreateLocation()
     int x = 0 ;
     int y = 0 ;
     char direction = 'n';
-    do
-    {
-        srand(time(0));
-        y = rand() % (y_length - 2) + 1;
-        srand(time(0));
-        x = rand() % (x_length - 2) + 1;
+    while (direction == 'n'){
+        do
+        {
+            srand(time(0));
+            y = rand() % (y_length - 2) + 1;
+            srand(time(0));
+            x = rand() % (x_length - 2) + 1;
 
-    }
-    while (map[y][x] != empty_space);
-    do
-    {
+        }
+        while (map[y][x] != empty_space);
         int int_direction ;
         srand(time(0));
         int_direction = rand() % 4 + 1;
         switch(int_direction)
         {
-        case 1 :
-        {
-            // Down
-            if (map[y-1][x] == empty_space)
+            case 1 :
             {
-                direction = 'd' ;
+                // Down
+                if (map[y-1][x] == empty_space && map[y-2][x] == empty_space )
+                {
+                    direction = 'd' ;
+                }
+                else
+                {
+                    direction = 'n' ;
+                }
+                break ;
             }
-            else
+            case 2 :
             {
-                direction = 'n' ;
+                // Left
+                if (map[y][x-1] == empty_space && map[y][x-2] == empty_space)
+                {
+                    direction = 'l' ;
+                }
+                else
+                {
+                    direction = 'n' ;
+                }
+                break ;
             }
-            break ;
-        }
-        case 2 :
-        {
-            // Left
-            if (map[y][x-1] == empty_space)
+            case 3 :
             {
-                direction = 'l' ;
+                // Right
+                if (map[y][x+1] == empty_space && map[y][x+2] == empty_space)
+                {
+                    direction = 'r' ;
+                }
+                else
+                {
+                    direction = 'n' ;
+                }
+                break ;
             }
-            else
+            case 4 :
             {
-                direction = 'n' ;
+                if (map[y+1][x] == empty_space && map[y+2][x] == empty_space)
+                {
+                    direction = 'u' ;
+                }
+                else
+                {
+                    direction = 'n' ;
+                }
+                break ;
             }
-            break ;
-        }
-        case 3 :
-        {
-            // Right
-            if (map[y][x+1] == empty_space)
-            {
-                direction = 'r' ;
-            }
-            else
-            {
-                direction = 'n' ;
-            }
-            break ;
-        }
-        case 4 :
-        {
-            if (map[y+1][x] == empty_space)
-            {
-                direction = 'u' ;
-            }
-            else
-            {
-                direction = 'n' ;
-            }
-            break ;
-        }
-        default :
-        {
-
-        }
         }
     }
-    while(direction == 'n');
 
     Part_Of_Snake_Body head{x,y,direction};
     return head ;
-
 }
 
 int Map::countOfEmptySpace()
